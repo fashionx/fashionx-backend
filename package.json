@@ -1,0 +1,37 @@
+{
+  "name": "fashionx-backend",
+  "version": "1.0.0",
+  "description": " Marketing Application",
+  "main": "server.js",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "date-format": "^1.1.0",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "http": "^0.0.0",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.0",
+    "mongoskin": "^2.1.0",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
+    "npm": "^4.4.1",
+    "path": "^0.12.7",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fashionx/fashionx-backend.git"
+  },
+  "author": "by Jaysnva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fashionx/fashionx-backend/issues"
+  },
+  "homepage": "https://github.com/fashionx/fashionx-backend#readme"
+}
