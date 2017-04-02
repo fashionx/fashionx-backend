@@ -59,7 +59,9 @@ require('./api/v1/users')(router);
 require('./api/v1/wardrops')(router);
 
 
-
+/* Middlewares basically intercepts incoming http request and as such you
+ can use them to perform several operations ranging from authentication to
+ validations etc.*/
 // catch 404 and forward to error handler
 router.use(function(req, res, next) {
   var err = new Error('Not Found');
