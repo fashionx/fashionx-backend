@@ -1,4 +1,8 @@
-var User = require('../controller/users');
+'use strict';
+
+var express = require('express'),
+    router = express.Router(),
+    User = require('../../controller/users');
 
 //API Server Endpoints
 
