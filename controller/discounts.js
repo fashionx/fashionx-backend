@@ -1,4 +1,4 @@
-'use strict':
+'use strict';
 
 var Discount = require('../lib/DiscountSchema').Discount;
 

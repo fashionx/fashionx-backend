@@ -29,24 +29,27 @@ if(cluster.isMaster) {
        consoleLog.error('FAILED TO START NEW WORKERQQ ->' + err);
    });
 } else {
-    app.listen(port, () => {
-        consoleLog.success('Server listening on port ' + port);
-  });
+    /**
+     * Create HTTP server.
+     */
+
+    var server = http.createServer(app);
+
+    /**
+     * Listen on provided port, on all network interfaces.
+     */
+
+    server.listen(port);
+    server.on('error', onError);
+    server.on('listening', onListening);
+
+    consoleLog.success('Server listening on port ' + port);
+
+    /*  app.listen(port, () => {
+          consoleLog.success('Server listening on port ' + port);
+    });*/
 }
 
-/**
- * Create HTTP server.
- */
-
-var server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-//server.listen(port);
-//server.on('error', onError);
-//server.on('listening', onListening);
 
 
 

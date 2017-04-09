@@ -1,4 +1,4 @@
-'use strict' :
+'use strict' ;
 
 var Location = require('../lib/LocationSchema').Location;
 
