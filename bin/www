@@ -4,16 +4,35 @@
  * Module dependencies.
  */
 
-var app = require('../server'); //değişebilir ????!!!!!
+var app = require('../server');
 var debug = require('debug')('nodeapp:server');
 var http = require('http');
+var control = require('strong-cluster-control');
+var cluster = require('cluster');
+var log = require('../utilities/log');
+var consoleLog = new log.console();
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+var port = normalizePort(process.env.PORT || 8810);
+
+if(cluster.isMaster) {
+   control.start({
+       size: control.CPUS
+   }).on('resize', (size) => {
+       consoleLog.info('Cluster size: ' + size);
+   }).on('startWorker', (worker) => {
+       consoleLog.info('Worker ' + worker.process.pid + ' is online and starting');
+   }).on('error', (err) => {
+       consoleLog.error('FAILED TO START NEW WORKERQQ ->' + err);
+   });
+} else {
+    app.listen(port, () => {
+        consoleLog.success('Server listening on port ' + port);
+  });
+}
 
 /**
  * Create HTTP server.
@@ -25,9 +44,11 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+//server.listen(port);
+//server.on('error', onError);
+//server.on('listening', onListening);
+
+
 
 /**
  * Normalize a port into a number, string, or false.
