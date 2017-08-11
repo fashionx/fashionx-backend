@@ -1,3 +1,3 @@
 'use strict';
 
-var Customer = require('../lib/CustomerSchema').Customer;
+const Customer = require('../lib/CustomerSchema').Customer;

@@ -1,5 +1,5 @@
 'use strict' ;
 
-var Location = require('../lib/LocationSchema').Location;
+const Location = require('../lib/LocationSchema').Location;
 
 //write Things

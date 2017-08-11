@@ -1,3 +1,3 @@
 'use strict' ;
 
-var Products = require('../lib/ProductSchema').Product;
+const Products = require('../lib/ProductSchema').Product;
