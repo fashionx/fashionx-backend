@@ -19,6 +19,12 @@ var express = require('express'),
 
 const router = express.Router();
 
+// index based routing hata fixed
+/*
+var index = require('./routes/index');
+app.use('/', index);
+*/
+
 app.use(router);
 router.use(logger('dev'));
 router.use(bodyParser.json());
