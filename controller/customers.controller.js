@@ -2,6 +2,8 @@
 
 const Customer = require('../lib/CustomerSchema.model').Customer;
 
+// Custom Response Body
+
 /** create function to create Customer. */
 exports.create = function (req, res) {
     Customer.create(req.body, function(err, result) {

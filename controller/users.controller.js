@@ -2,6 +2,9 @@
 
 const User = require('../lib/UserSchema.model').User;
 
+// User authenticate
+// Custom Response body
+
 /** create function to create User. */
 exports.create = function (req, res) {
     User.create(req.body, function(err, result) {
