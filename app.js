@@ -26,6 +26,17 @@ app.use('/', index);
 */
 
 app.use(router);
+
+// Header Context
+router.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.header('Content-Type', 'application/json');
+    res.header('Content-Type', 'text/plain');
+    next();
+});
+
 router.use(logger('dev'));
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
