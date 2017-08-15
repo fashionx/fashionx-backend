@@ -1,4 +1,4 @@
-var  User = require('../../controller/users');
+var  User = require('../../controller/users.controller');
 
 //API Server Endpoints
 

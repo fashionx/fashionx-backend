@@ -1,3 +1,3 @@
 'use strict' ;
 
-var Wardrops = require('../lib/WardrobSchema').Wardrop;
+var Wardrops = require('../lib/WardrobSchema.model').Wardrop;

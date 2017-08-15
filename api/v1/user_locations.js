@@ -1,4 +1,4 @@
-var UserLocation = require('../../controller/user_locations');
+var UserLocation = require('../../controller/user_locations.controller');
 
 //API Server Endpoints
 

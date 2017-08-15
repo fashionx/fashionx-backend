@@ -1,4 +1,4 @@
-var Product = require('../../controller/products');
+var Product = require('../../controller/products.controller');
 
 //API Server Endpoints
 

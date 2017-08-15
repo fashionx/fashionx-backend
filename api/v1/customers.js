@@ -1,4 +1,4 @@
-var Customer = require('../../controller/customers');
+var Customer = require('../../controller/customers.controller');
 // API Server Endpoints
 
 //Default Endpoints

@@ -1,4 +1,4 @@
-var Discount = require('../../controller/discounts');
+var Discount = require('../../controller/discounts.controller');
 
 // API Server Endpoints
 

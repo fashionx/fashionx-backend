@@ -8,14 +8,14 @@ var express = require('express'),
     logger = require('morgan'),
     routes = require('./api/v1/index'),
 
-    CustomerController = require('./controller/customers'),
-    DiscountsController = require('./controller/discounts'),
-    LocaitonsController = require('./controller/locations'),
-    ProductReservationsController = require('./controller/product_reservations'),
-    ProductsController = require('./controller/products'),
-    UserLocationsController = require('./controller/user_locations'),
-    UserController = require('./controller/users'),
-    WardropsController = require('./controller/wardrops');
+    CustomerController = require('./controller/customers.controller'),
+    DiscountsController = require('./controller/discounts.controller'),
+    LocaitonsController = require('./controller/locations.controller'),
+    ProductReservationsController = require('./controller/product_reservations.controller'),
+    ProductsController = require('./controller/products.controller'),
+    UserLocationsController = require('./controller/user_locations.controller'),
+    UserController = require('./controller/users.controller'),
+    WardropsController = require('./controller/wardrops.controller');
 
 const router = express.Router();
 

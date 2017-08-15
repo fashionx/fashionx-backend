@@ -1,6 +1,6 @@
 'use strict';
 
-const User = require('../lib/UserSchema').User;
+const User = require('../lib/UserSchema.model').User;
 
 /** create function to create User. */
 exports.create = function (req, res) {

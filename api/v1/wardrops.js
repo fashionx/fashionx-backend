@@ -1,4 +1,4 @@
-var Wardrop = require('../../controller/wardrops');
+var Wardrop = require('../../controller/wardrops.controller');
 
 // API Server Endpoints
 
