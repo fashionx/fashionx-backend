@@ -3,6 +3,20 @@ const Product = require('../../controller/products.controller');
 //API Server Endpoints
 
 //Default Endpoints
+
+module.exports = function(router) {
+  
+  router.post('/products', Product.create),
+  router.get('/products/:id', Product.get),
+  router.put('/products/:id', Product.update),
+  router.delete('/products/:id', Product.delete)
+
+  //Custom Endpoints
+
+}
+
+
+/*
 module.exports = function (router) {
   	router.post('/products', function (req, res){
   		Product.create
@@ -15,14 +29,4 @@ module.exports = function (router) {
   	}),
   	router.put('/products/:id', function (req, res){
   		Product.delete
-  	})
-
-/*module.exports = function(router) {
-  router.post('/products', Product.create),
-  router.get('/products/:id', Product.get),
-  router.put('/products/:id', Product.update),
-  router.delete('/products/:id', Product.delete)
-*/
-  //Custom Endpoints
-
-}
+  	})*/

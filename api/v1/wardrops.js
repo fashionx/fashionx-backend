@@ -3,7 +3,23 @@ const Wardrop = require('../../controller/wardrops.controller');
 // API Server Endpoints
 
 //Default Endpoints
-module.exports = function (router) {
+
+module.exports = function(){
+
+  router.post('/wardrops', Wardrop.create),
+  router.get('/wardrops/:id', Wardrop.get),
+  router.put('/wardrops/:id', Wardrop.update),
+  router.delete('/wardrops/:id', Wardrop.delete)
+
+
+  //Custom Endpoints
+
+}
+
+
+
+
+/*module.exports = function (router) {
   	router.post('/products', function (req, res){
   		Wardrop.create
   	}),
@@ -15,15 +31,4 @@ module.exports = function (router) {
   	}),
   	router.put('/products/:id', function (req, res){
   		Wardrop.delete
-  	})
-
-/*module.exports = function(){
-  router.post('/wardrops', Wardrop.create),
-  router.get('/wardrops/:id', Wardrop.get),
-  router.put('/wardrops/:id', Wardrop.update),
-  router.delete('/wardrops/:id', Wardrop.delete)
-*/
-
-  //Custom Endpoints
-
-}
+  	})*/
