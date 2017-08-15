@@ -1,4 +1,4 @@
-var  User = require('../../controller/users.controller');
+const  User = require('../../controller/users.controller');
 
 //API Server Endpoints
 

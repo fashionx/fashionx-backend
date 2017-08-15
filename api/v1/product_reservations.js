@@ -1,4 +1,4 @@
-var ProductReservation = require('../../controller/product_reservations.controller');
+const ProductReservation = require('../../controller/product_reservations.controller');
 
 //API Server Endpoints
 

@@ -1,4 +1,4 @@
-var Product = require('../../controller/products.controller');
+const Product = require('../../controller/products.controller');
 
 //API Server Endpoints
 
