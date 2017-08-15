@@ -1,6 +1,6 @@
 'use strict';
 
-const Customer = require('../lib/CustomerSchema').Customer;
+const Customer = require('../lib/CustomerSchema.model').Customer;
 
 /** create function to create Customer. */
 exports.create = function (req, res) {
